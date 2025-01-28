@@ -23,6 +23,12 @@ console.log('JWT Secret:', process.env.JWT_SECRET); // Should print your secret
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({
+  origin: 'https://creative-madeleine-0bee28.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 
 // CORS Configuration to allow requests from your Netlify frontend
 
