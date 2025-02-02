@@ -24,7 +24,7 @@ console.log('JWT Secret:', process.env.JWT_SECRET); // Should print your secret
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://creative-madeleine-0bee28.netlify.app',
+  origin: '',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
